@@ -7,7 +7,7 @@ export interface WeatherData {
     id: number;
     main: string;
     description: string;
-    icon: string;
+    icon: string; // Ensure 'icon' is included
   }[];
   base: string;
   main: {
@@ -49,6 +49,8 @@ export interface ForecastData {
     weather: {
       main: string;
       description: string;
+      icon: string; // ✅ Ensure 'icon' is included
+
     }[];
   }[];
 }

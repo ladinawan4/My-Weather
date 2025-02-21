@@ -3,6 +3,7 @@ import WeatherIcon from './WeatherIcon';
 
 interface ForecastListProps {
   forecast: ForecastData;
+ 
 }
 
 export default function ForecastList({ forecast }: ForecastListProps) {

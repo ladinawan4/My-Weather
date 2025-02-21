@@ -4,9 +4,9 @@ import { useWeatherByCity, useWeatherByCoords } from "../../api/weatherApi";
 import SearchBar from "../../components/SearchBar";
 import WeatherCard from "../../components/WeatherCard";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 export default function Home() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Faisalabad");
   const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(null);
   const [timeOfDay, setTimeOfDay] = useState<'morning' | 'day' | 'evening' | 'night'>('day');
   const [background, setBackground] = useState("bg-blue-500");
@@ -193,7 +193,8 @@ export default function Home() {
               <WeatherCard weather={weather} timeOfDay={timeOfDay} />
             </motion.div>
           )}
-        </motion.div>
+<Link className="text-white mt-4" href="/forecast">Explore the 7-Day Weather Forecast</Link>
+</motion.div>
       </motion.div>
     </div>
   );
